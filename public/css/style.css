@@ -1,3 +1,6 @@
 /* any css stylesheets can go in this folder */
-asdfasdfasdfadfs
+body {
+    background-color:darkcyan;
+}
+
 /* hint- remember to import them in your handlebars! */
