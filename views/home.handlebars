@@ -1,12 +1,25 @@
 {{! Any landing page layout will go here }}
 <img src="/images/HugeMonitor.jpg" alt="StreamScape landing image">
 
- <div class="input-field col s12">
-    <select>
-      <option value="" disabled selected>Choose your option</option>
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-      <option value="3">Option 3</option>
-    </select>
-    <label>Materialize Select</label>
-  </div>
+<div class="container movies">
+    <div class="row">
+        <div class="col search">
+            <input type="text" class="movie">
+            <!-- Dropdown Trigger -->
+            <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Select a Country</a>
+
+            <!-- Dropdown Structure -->
+            <ul id='dropdown1' class='dropdown-content'>
+                <li><a href="#!">one</a></li>
+                <li><a href="#!">two</a></li>
+                <li class="divider" tabindex="-1"></li>
+                <li><a href="#!">three</a></li>
+                <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+                <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+            </ul>
+            <button class="btn btn-info search_btn">Search for a Movie / Show</button>
+        </div>
+    </div>
+</div>
+
+<script src="/js/home.js"></script>
