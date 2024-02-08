@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class DataOne extends Model {}
+class Movie extends Model {}
 
-DataOne.init(
+Movie.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -24,10 +24,7 @@ DataOne.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    needed_funding: {
-      type: DataTypes.FLOAT,
-      allowNull: false,
-    },
+    
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -41,8 +38,8 @@ DataOne.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'data one',
+    modelName: 'movie',
   }
 );
 
-module.exports = DataOne;
+module.exports = Movie;
