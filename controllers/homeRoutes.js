@@ -7,6 +7,7 @@ const router = require('express').Router();
 // add a get / (landing page) route here
 router.get('/', async (req, res) => {
   console.log('Landing page attempting to be retrieved');
+  res.render('home')
   try {
   } catch (err) {
     console.log('There was an error retrieving landing page');
