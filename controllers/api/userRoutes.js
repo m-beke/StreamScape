@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const User = require('../models/User');
+const { User } = require('../../models');
 // import any models you plan to use for this data's routes here
 
 
@@ -7,16 +7,17 @@ const User = require('../models/User');
 
 //add a post user API route here
 router.post('/', async (req, res) => {
+  console.log('post route')
   try {
     const userData = await User.create({ email: req.body.email, password: req.body.password,name: req.body.name });
-
+console.log(userData)
     if (!userData) {
       res
         .status(400)
         .json({ message: 'The email or password,is inoccorect please try again' });
       return;
     }
-    const validPassword = await userData.checkPassword(req.body.password);
+    const validPassword =  userData.checkPassword(req.body.password);
 
     if (!validPassword) {
       res
@@ -55,7 +56,7 @@ router.post('/login', async (req, res) => {
         .json({ message: 'Incorrect email or password, please try again' });
       return;
     }
-    const validPassword = await userData.checkPassword(req.body.password);
+    const validPassword =  userData.checkPassword(req.body.password);
 
     if (!validPassword) {
       res
@@ -93,4 +94,4 @@ router.post('/logout', (req, res) => {
   }
 });
 
-module.exports = router();
+module.exports = router;
