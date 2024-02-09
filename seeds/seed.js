@@ -2,42 +2,38 @@ const sequelize = require('../config/connection');
 
 // import any models you want to seed here
 const { User } = require('../models');
+const { Movie } = require('../models');
 // import any data you want to seed here
-
-const seedDatabase = async () => {
-  await sequelize.sync({ force: true });
-  console.log('Sequelize synced');
-
-  // bulkCreate your users here
-  const userData = require('./userData.json');
+const userData=require('./userData.json');
+const movieData=require('./movieData.json')
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  await User.bulkCreate(userData, {
+  const users = await User.bulkCreate(userData, {
     individualHooks: true,
     returning: true,
   });
 
-  process.exit(0);
-};
+
+
   // hint- use your activities!
 
   console.log('Users created');
 
   // Here is an example of how you can randomly assign a user to your data!
-  for (const dataOne of dataOneData) {
+  for (const movie of movieData) {
     // gets a random user
     const randomUser = users[Math.floor(Math.random() * users.length)];
-    console.log(`Random user for dataOne: ${randomUser.id}`);
+    console.log(`Random user for movie: ${randomUser.id}`);
     // assigns the user to the data
-    await DataOne.create({
-      ...dataOne,
+    await Movie.create({
+      ...movie,
       user_id: randomUser.id,
     });
+
+    console.log('moive created');
   }
-  console.log('Data One created');
-  // console.log(favorite)
   process.exit(0);
 };
 
