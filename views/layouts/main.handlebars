@@ -13,12 +13,25 @@
 <body>
   <header class="display-flex justify-space-between align-center p-2">
     <nav>
-      <h1>
-        StreamScape
-      </h1>
-      {{#if logged_in}}
-      <button class="btn" id="logout">logout</button>
-      {{/if}}
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">StreamScape</a>
+        {{#if logged_in}}
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <a class="waves-effect waves-light btn" href="/StreamScape/views/login-signup.handlebars">Log Out</a>
+        </ul>
+        </a>
+        {{else}}
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <a class="waves-effect waves-light btn" href="/views/login-signup.handlebars">Log In</a>
+        </ul>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <a class="waves-effect waves-light btn" href="/views/login-signup.handlebars">Sign Up</a>
+        </ul>
+        {{/if}}
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <a class="waves-effect waves-light btn" href="/views/about.handlebars">About Us</a>
+        </ul>
+      </div>
     </nav>
   </header>
   <main class="container container-fluid mt-5">
@@ -32,7 +45,6 @@
   <script src="/js/logout.js"></script>
   {{/if}}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="/js/home.js"></script>
 </body>
 
 </html>
