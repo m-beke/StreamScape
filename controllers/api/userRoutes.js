@@ -15,8 +15,13 @@ router.post('/', async (req, res) => {
  }
 });
 
+
+//api/login
+//add a post login API route here
+
 // /api/login
 // add a post login API route here
+
 router.post('/login', async (req, res) => {
   try { const userData = await User.findOne({ where: { email: req.body.email } });
 
@@ -35,7 +40,11 @@ router.post('/login', async (req, res) => {
    return;
   }
 
+
+  //Create session variables based on the logged in user
+
   // Create session variables based on the logged in user
+
   req.session.save(() => {
     req.session.user_id = userData.id;
    req.session.logged_in = true;
@@ -51,11 +60,19 @@ router.post('/login', async (req, res) => {
   }
 });
 
+
+///api/logout
+//add a post logout API route here
+router.post('/logout', (req, res) => {
+  if (req.session.logged_in) {
+    //Remove the session variables
+
 // /api/logout
 // add a post logout API route here
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     // Remove the session variables
+
    req.session.destroy(() => {
      res.status(204).end();
    });
