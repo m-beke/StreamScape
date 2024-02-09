@@ -1,8 +1,19 @@
 const router = require('express').Router();
-
+const { Movie } = require('../../models')
 // import any models you plan to use for this data's routes here
 
 // If you would like to you an authGuard middleware, import it here
+router.get('/', async (req, res) => {
+  try {
+  const data = await Movie.findAll()
+  const movies = data.map((movie) => movie.get({ plain: true  }));
+  res.json(movies)
+ 
+  } catch (err) {
+    console.log('There was an error adding data one');
+    res.status(500).json(err);
+  }
+});
 
 // /api/dataOne
 // add a post API route here

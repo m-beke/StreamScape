@@ -17,6 +17,7 @@ router.get('/', async (req, res) => {
 
 // add a get /login route here
 router.get('/login', (req, res) => {
+  res.render("login-signup")
   console.log('Login page attempting to be retrieved');
   try {
   } catch (err) {
@@ -27,10 +28,22 @@ router.get('/login', (req, res) => {
 
 // add a get /signup route here
 router.get('/signup', (req, res) => {
+  res.render("login-signup")
   console.log('Signup page attempting to be retrieved');
   try {
   } catch (err) {
     console.log('There was an error retrieving signup page');
+    res.status(500).json(err);
+  }
+});
+
+// takes you to the 'About Us' Page
+router.get('/about', (req, res) => {
+  res.render("about")
+  console.log('About page attempting to be retrieved');
+  try {
+  } catch (err) {
+    console.log('There was an error retrieving about page');
     res.status(500).json(err);
   }
 });
