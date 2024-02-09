@@ -37,7 +37,7 @@ router.get('/signup', (req, res) => {
   }
 });
 
-// /about route
+// takes you to the 'About Us' Page
 router.get('/about', (req, res) => {
   res.render("about")
   console.log('About page attempting to be retrieved');

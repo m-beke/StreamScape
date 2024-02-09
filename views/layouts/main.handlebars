@@ -14,7 +14,7 @@
   <header class="display-flex justify-space-between align-center p-2">
     <nav>
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo">StreamScape</a>
+        <a href="/" class="brand-logo">StreamScape</a>
         {{#if logged_in}}
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <a class="waves-effect waves-light btn" href="/logout">Log Out</a>
@@ -22,10 +22,7 @@
         </a>
         {{else}}
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <a class="waves-effect waves-light btn" href="/login">Log In</a>
-        </ul>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <a class="waves-effect waves-light btn" href="/signup">Sign Up</a>
+          <a class="waves-effect waves-light btn" href="/login">Log In/Sign Up</a>
         </ul>
         {{/if}}
         <ul id="nav-mobile" class="right hide-on-med-and-down">
