@@ -77,4 +77,34 @@ router.get('/reviews', (req, res) => {
     res.status(500).json(err);
   }
 });
+
+router.get('/:title', async (req, res) => {
+  try {
+    const data = await Movie.findAll(
+      {where: {
+        title: req.params.title
+      }}
+    )
+    console.log(data)
+    //const moviesData = data.map((mapMovie) => mapMovie.get({ plain: true  }));
+    const url = `https://streaming-availability.p.rapidapi.com/search/title?title=${data.title}&country=us&show_type=all&output_language=en`;
+    const options = {
+      method: 'GET',
+      headers: {
+        'X-RapidAPI-Key': '3f01ce3775mshc65e5fdb455e382p181b75jsn99eeab1b46ee',
+        'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
+      }
+    };
+    const response = await fetch(url, options);
+    const movies = await response.json(); // Parse JSON response
+    console.log(movies)
+    res.json(movies)
+    res.render("results",{title: movies.result.title})
+
+  } catch (err) {
+    console.log('There was an error adding data one');
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
