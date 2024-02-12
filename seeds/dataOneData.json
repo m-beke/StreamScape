@@ -1,7 +1,7 @@
 [
-  { "user_id:": "Mary", "message": "THIS IS AN EXAMPLE OF SOME JSON DATA" },
+  { "user_id:": "Chicken Noodle Soup", "message": "THIS IS AN EXAMPLE OF SOME JSON DATA" },
   {
-    "user_id:": "Mary",
+    "user_id:": "Chicken Noodle Soup",
     "message": "YOU CAN USE SEED.JS TO INSERT THIS DATA INTO YOUR DATABASE!"
   }
 ]

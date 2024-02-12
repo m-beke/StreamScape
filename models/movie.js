@@ -24,10 +24,28 @@ Movie.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
+<<<<<<< Updated upstream:models/movie.js
+<<<<<<< Updated upstream:models/movie.js
+<<<<<<< Updated upstream:models/movie.js
     watched: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
       defaultValue: false,
+=======
+    genre: {
+      type: DataTypes.STRING,
+      allowNull: false,
+>>>>>>> Stashed changes:models/DataOne.js
+=======
+    genre: {
+      type: DataTypes.STRING,
+      allowNull: false,
+>>>>>>> Stashed changes:models/DataOne.js
+=======
+    genre: {
+      type: DataTypes.STRING,
+      allowNull: false,
+>>>>>>> Stashed changes:models/DataOne.js
       
     },
     
