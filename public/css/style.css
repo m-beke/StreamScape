@@ -1,21 +1,45 @@
-any css stylesheets can go in this folder */ 
-body {
-  background-color: darkcyan;
+/* any css stylesheets can go in this folder */ 
+body {  
+  background-image: url("/images/HugeMonitor.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: #008b8b;
+  align-items: center;
+  background-attachment: local;
 }
 
 #container {
-  width:260px;
-  height:143px;
+  width: 150px;
+  height: 150px;
   overflow:visible;
+  background: transparent !important;
 }
 
 #preloader{
   overflow:visible;
 }
 
+#backer {
+  fill: none;
+}
 
+.percentTxt{
+      color: rgb(255, 255, 255); 
+}
+    
+/* .background  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
 
-
+#background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
 
 
 
