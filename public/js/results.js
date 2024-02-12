@@ -1,1 +1,1 @@
-console.log(hopefully works!)
+console.log(hopefully)
