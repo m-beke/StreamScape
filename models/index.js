@@ -1,6 +1,9 @@
 // import all models here
 const User = require('./User');
-const Movie = require('./movie');
+
+
+const Movie = require('./Movie');
+
 // create any associations here
 User.hasMany(Movie, {
     foreignKey: 'user_id',
