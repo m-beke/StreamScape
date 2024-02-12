@@ -15,11 +15,8 @@ router.post('/', async (req, res) => {
  }
 });
 
-<<<<<<< Updated upstream
-=======
 
 
->>>>>>> Stashed changes
 // /api/login
 // add a post login API route here
 router.post('/login', async (req, res) => {
@@ -40,16 +37,7 @@ router.post('/login', async (req, res) => {
    return;
   }
 
-<<<<<<< Updated upstream
-=======
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
   // Create session variables based on the logged in user
   req.session.save(() => {
     req.session.user_id = userData.id;
@@ -66,11 +54,8 @@ router.post('/login', async (req, res) => {
   }
 });
 
-<<<<<<< Updated upstream
-=======
 
 
->>>>>>> Stashed changes
 // /api/logout
 // add a post logout API route here
 router.post('/logout', (req, res) => {
@@ -83,16 +68,5 @@ router.post('/logout', (req, res) => {
    res.status(404).end();
  }
 });
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-
-module.exports = router();
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
   
 module.exports = router;
->>>>>>> Stashed changes
