@@ -1,10 +1,10 @@
 // console.log('hookedup');
 TweenMax.set(container, {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    xPercent: -50,
-    yPercent: -50
+    position: 'relative',
+    top: '75%',
+    left: '75%',
+    xPercent: -30,
+    yPercent: -30
   });
   
   TweenMax.set($("#mask"), {scaleX:0});
