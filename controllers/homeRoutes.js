@@ -37,7 +37,7 @@ router.get('/signup', (req, res) => {
   }
 });
 
-// /about route
+// takes you to the 'About Us' Page
 router.get('/about', (req, res) => {
   res.render("about")
   console.log('About page attempting to be retrieved');
@@ -48,4 +48,33 @@ router.get('/about', (req, res) => {
   }
 });
 
+router.get('/results', (req, res) => {
+  res.render("results")
+  console.log('Resluts page attempting to be retrieved');
+  try {
+  } catch (err) {
+    console.log('There was an error retrieving results page');
+    res.status(500).json(err);
+  }
+});
+
+router.get('/watchlist', (req, res) => {
+  res.render("watchlist")
+  console.log('Watchlist page attempting to be retrieved');
+  try {
+  } catch (err) {
+    console.log('There was an error retrieving watchlist page');
+    res.status(500).json(err);
+  }
+});
+
+router.get('/reviews', (req, res) => {
+  res.render("reviews")
+  console.log('Reviews page attempting to be retrieved');
+  try {
+  } catch (err) {
+    console.log('There was an error retrieving reviews page');
+    res.status(500).json(err);
+  }
+});
 module.exports = router;

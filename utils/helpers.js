@@ -5,7 +5,7 @@
 //     timeZone: 'America/New_York'
 //   };
   
-//     // Format date as MM/DD/YYYY
+// //     // Format date as MM/DD/YYYY
 //     function formatDate(date){
 //       return date.toLocaleDateString('en-US');
 //     }
