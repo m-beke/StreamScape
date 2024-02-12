@@ -1,14 +1,14 @@
 // import all models here
 const User = require('./User');
-const DataOne = require('./DataOne');
+const Movie = require('./movie');
 // create any associations here
-User.hasMany(DataOne, {
+User.hasMany(Movie, {
     foreignKey: 'user_id',
     onDelete: 'CASCADE'
   });
   
-  DataOne.belongsTo(User, {
+  Movie.belongsTo(User, {
     foreignKey: 'user_id'
   });
 // export all models here
-module.exports = { User, DataOne};
+module.exports = { User, Movie};
