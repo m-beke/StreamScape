@@ -9,7 +9,7 @@ const { User } = require('../../models');
 router.post('/', async (req, res) => {
   console.log('post route')
   try {
-    const userData = await User.create({ name: req.body.name, password: req.body.password,name: req.body.name });
+    const userData = await User.create({ name: req.body.name, password: req.body.password, email: req.body.email });
 console.log(userData)
     if (!userData) {
       res
@@ -39,10 +39,6 @@ console.log(userData)
     });
   }
 });
-
-
-
-
 
 // /api/login
 // add a post login API route here
