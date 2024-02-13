@@ -1,4 +1,7 @@
+const searchBtn = document.querySelector("#movie-search")
+console.log(searchBtn);
 // const fetch = require('node-fetch');
+// const { application } = require("express");
 
 // const url = 'https://streaming-availability.p.rapidapi.com/countries';
 // const options = {
@@ -60,4 +63,18 @@ function displayData(data) {
   dataContainer.appendChild(ul);
 }
 
-fetchDataAndDisplay();
+//fetchDataAndDisplay();
+
+const searchFormhandler = async function (event) {
+  event.preventDefault()
+  const title = document.querySelector('.movie').value
+  console.log(title+"title")
+  await fetch(`/api/:title`, {
+    method: "GET",
+    // body: JSON.stringify({ title }),
+    headers: { "Content-Type": "application/json" },
+
+  })
+  document.location.replace(`/results/${title}`)
+};
+searchBtn.addEventListener("click", searchFormhandler);
