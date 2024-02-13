@@ -1,3 +1,4 @@
+
 const searchBtn = document.querySelector("#movie-search")
 console.log(searchBtn);
 // const fetch = require('node-fetch');
@@ -69,12 +70,18 @@ const searchFormhandler = async function (event) {
   event.preventDefault()
   const title = document.querySelector('.movie').value
   console.log(title+"title")
-  await fetch(`/api/:title`, {
-    method: "GET",
-    // body: JSON.stringify({ title }),
-    headers: { "Content-Type": "application/json" },
+location.href=`/api/movie/${title}`;
 
-  })
-  document.location.replace(`/results/${title}`)
+  // await fetch(`/api/movie/${title}`, {//plugged in movie/ and title
+  //   method: "GET",
+  //   // body: JSON.stringify({ title }),
+  //   headers: { "Content-Type": "application/json" },
+
+  // })
+  // if(response.ok){
+
+
+  // }
+  //document.location.replace(`/results`)
 };
 searchBtn.addEventListener("click", searchFormhandler);
