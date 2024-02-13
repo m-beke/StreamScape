@@ -4,7 +4,9 @@ const sequelize = require('../config/connection');
 class Movie extends Model {}
 
 Movie.init(
-    {
+  {
+
+    
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -40,9 +42,10 @@ Movie.init(
     {
     sequelize,
     timestamps: false,
-    freezeTableName: true,
+  freezeTableName: true,
     underscored: true,
     modelName: 'movie',
     }
 );
-module.exports = Movie;
+
+module.exports = Movie
