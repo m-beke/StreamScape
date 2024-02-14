@@ -15,7 +15,9 @@
     - Node.js
 
 ## Project Link
-    https://github.com/m-beke/StreamScape
+    [GitHub Repository] https://github.com/m-beke/StreamScape
+    [App Link] https://still-oasis-92537-ca9b2c9be51c.herokuapp.com/
+    [Explainer Powerpoint] https://docs.google.com/presentation/d/19Pqv4MGbDpP4WrvEwwzEqaBMaqruMrXhjlSJpYyLqZU/edit?usp=sharing
 
 ## Acknowledgments
     Special thanks to our instructors John and Mary for their patience and guidance!
